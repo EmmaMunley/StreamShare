@@ -68,6 +68,7 @@ class Chat extends React.Component<Props, State> {
         }
 
         componentDidMount(): void {
+                client.connect();
                 client.on("message", this.props.receiveMessage);
         }
 
